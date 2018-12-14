@@ -9,7 +9,9 @@ def main():
 
 @app.route('/process_inputs', methods=['POST'])
 def process_inputs():
-    name = request.form.get('input_name', '')
+    firstname = request.form.get('input_firstname', '')
+    lastname = request.form.get('input_lastname','')
+    code = request.form.get('input_code','')
     dropdown = request.form.get('input_dropdown', '')
     select = request.form.get('input_select', '')
     freeform = request.form.get('input_freeform', '')

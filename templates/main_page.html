@@ -12,16 +12,20 @@
   </head>
   <body>
     <div id="banner" class="container">
-      <h1 class="display-4">Hello, world!</h1>
+      <h1 class="display-4">Survey</h1>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
-          <label for="input_name">Name</label>
-          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Fred Flintstone">
+          <label for="input_firstname"><b>First Name</b></label>
+          <input type="text" class="form-control" name="input_firstname"  id="input_firstname" placeholder="Fred">
+        </div>
+        <div class = "form-group">
+            <label for="input_lastname"><b>Last Name</b></label>
+            <input type="text" class="form-control" name="input_firstname" id="input_lastname" placeholder="Flintstone">
         </div>
         <div class="form-group">
-          <label for="input_dropdown">Grade Level</label>
+          <label for="input_dropdown"><b>Grade Level</b></label>
           <select class="form-control" name="input_dropdown" id="input_dropdown">
             <option>9th</option>
             <option>10th</option>
@@ -31,7 +35,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="input_select">Favorite Color</label>
+          <label for="input_select"><b>Favorite Color</b></label>
           <select multiple class="form-control" name="input_select" id="input_select">
             <option>Red</option>
             <option>Green</option>
@@ -41,7 +45,15 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="input_freeform">Any notes?</label>
+            <label for="input_code"><b>Are you coding right now?</b></label>
+            <select multiple class="form-control" name="input_select" id="input_select">
+            <option>Yes</option>
+            <option>I will in the future</option>
+            <option>My job is coding</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="input_freeform"><b>Any notes?</b></label>
           <textarea class="form-control" name="input_freeform" id="input_freeform" rows="3"></textarea>
         </div>
         <a href=/submit>Submit</a>
